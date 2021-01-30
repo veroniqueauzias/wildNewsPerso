@@ -1,7 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaultController!{% endblock %}
-
+{% block title %} Hello Wilder!{% endblock %}
 {% block body %}
-
+    <div class="pillsContainer flex">
+        <ul class="nav nav-pills">
+            {% for category in categories %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('categorie', {'id':category.id} ) }}">{{ category.title|capitalize }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <hr/>
+    {% include '_articleCard.html.twig' with {'articles' : articles}%}
 {% endblock %}

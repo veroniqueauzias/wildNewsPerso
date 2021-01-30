@@ -1,5 +1,24 @@
 // customize some Bootstrap variables
 $primary: darken(#428bca, 20%);
+$light: #5ebfe5;
 
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
+
+.flex {
+  display: flex;
+}
+
+.cardContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.singlecard {
+  margin: 20px;
+}
+
+.pillsContainer {
+  justify-content: center;
+}
